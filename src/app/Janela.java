@@ -178,11 +178,11 @@ public class Janela extends Cadastro {
 		textNome.setColumns(10);
 		
 		JButton btnLimpar = new JButton("Limpar");
-		btnLimpar.setBounds(277, 302, 89, 23);
+		btnLimpar.setBounds(320, 302, 89, 23);
 		frmLsport.getContentPane().add(btnLimpar);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
-		btnCadastrar.setBounds(89, 302, 89, 23);
+		btnCadastrar.setBounds(51, 302, 89, 23);
 		frmLsport.getContentPane().add(btnCadastrar);
 		
 		textTamanho = new JTextField();

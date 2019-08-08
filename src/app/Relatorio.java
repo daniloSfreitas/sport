@@ -1,16 +1,16 @@
 package app;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import javax.swing.JTextPane;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JScrollBar;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
+
+import dao.CadastroDaoImpl;
 
 public class Relatorio {
 
@@ -48,10 +48,6 @@ public class Relatorio {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JTextPane textPane = new JTextPane();
-		textPane.setBounds(10, 29, 414, 182);
-		frame.getContentPane().add(textPane);
-		
 		JButton btnConsultar = new JButton("Consultar");
 		btnConsultar.setBounds(42, 227, 89, 23);
 		frame.getContentPane().add(btnConsultar);
@@ -63,6 +59,19 @@ public class Relatorio {
 		JLabel lblConsultaDeCadastro = new JLabel("Consulta de Cadastro");
 		lblConsultaDeCadastro.setBounds(159, 0, 119, 14);
 		frame.getContentPane().add(lblConsultaDeCadastro);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(42, 25, 340, 191);
+		frame.getContentPane().add(textArea);
+		
+		
+		btnConsultar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 Cadastro cadastro = new Cadastro();
+				   CadastroDaoImpl c = new CadastroDaoImpl();
+				 
+				
+			}
+		});
 	}
-
 	}

@@ -58,10 +58,26 @@ public class CadastroDaoImpl implements CadastroDAO{
 			while (rs.next()) {
 
 				Cadastro cadastro = new Cadastro();
+				cadastro.setNome(rs.getString("Nome"));
 				cadastro.setModelo(rs.getString("Modelo"));
+				cadastro.setTamanho(rs.getString("Tamanho"));
+				cadastro.setNomeC(rs.getString("NomeC"));
+				cadastro.setNumero(rs.getInt("Numero"));
+				cadastro.setCep(rs.getInt("Cep"));
+				cadastro.setRua(rs.getString("Rua"));
+				cadastro.setApt(rs.getInt("Apt"));
+				cadastro.setCompl(rs.getInt("Compl"));
+				cadastro.setTelefone(rs.getInt("Telefone"));
+				cadastro.setEmail(rs.getString("Email"));
+
 
 				cadastros.add(cadastro);
 			}
+			
+			conexao.close();
+			pstmt.close();
+			rs.close();
+			
 
 		} catch (SQLException e) {
 

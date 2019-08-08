@@ -29,7 +29,7 @@ public class CadastroDaoImpl implements CadastroDAO{
 			pstmt.setInt(5, cadastro.getNumero());
 			pstmt.setInt(6, cadastro.getCep());
 			pstmt.setString(7, cadastro.getRua());
-			pstmt.setInt(7, cadastro.getApt());
+			pstmt.setInt(8, cadastro.getApt());
 			pstmt.setInt(9, cadastro.getCompl());
 			pstmt.setInt(10, cadastro.getTelefone());
 			pstmt.setString(11, cadastro.getEmail());

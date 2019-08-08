@@ -181,9 +181,9 @@ public class Janela extends Cadastro {
 		btnLimpar.setBounds(277, 302, 89, 23);
 		frmLsport.getContentPane().add(btnLimpar);
 		
-		JButton btnCadastar = new JButton("Cadastar");
-		btnCadastar.setBounds(89, 302, 89, 23);
-		frmLsport.getContentPane().add(btnCadastar);
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setBounds(89, 302, 89, 23);
+		frmLsport.getContentPane().add(btnCadastrar);
 		
 		textTamanho = new JTextField();
 		textTamanho.setBounds(78, 103, 48, 20);
@@ -226,7 +226,7 @@ public class Janela extends Cadastro {
 		}
 		});
 		
-		btnCadastar.addActionListener(new ActionListener()
+		btnCadastrar.addActionListener(new ActionListener()
 		   {
 		   public void actionPerformed( ActionEvent e )
 		    {
@@ -236,6 +236,17 @@ public class Janela extends Cadastro {
 			   CadastroDaoImpl c = new CadastroDaoImpl();
 			   
 			   cadastro.setNome(textNome.getText());
+			   cadastro.setModelo(textModelo.getText());
+			   cadastro.setTamanho(textTamanho.getText());
+			   cadastro.setNomeC(textNomeC.getText());
+			   cadastro.setNumero(Integer.parseInt(textNumero.getText()));
+			   cadastro.setCep(Integer.parseInt(textCep.getText()));
+			   cadastro.setRua(textRua.getText());
+			   cadastro.setApt(Integer.parseInt(textApt.getText()));
+			   cadastro.setCompl(Integer.parseInt(textCompl.getText()));
+			   cadastro.setTelefone(Integer.parseInt(textTel.getText()));
+			   cadastro.setEmail(textEmail.getText());
+			   			   
 			   
 			   	 	System.out.println("------------Cadastro------------");	
 			   	  Nome = textNome.getText();
@@ -263,7 +274,8 @@ public class Janela extends Cadastro {
 				   System.out.println("--------------------------------");
 				  clearFields();
 				  
-				  
+				  c.cadastro(cadastro);
+  
 				  
 			   
 		    

@@ -53,20 +53,11 @@ public class Relatorio {
 		frame.getContentPane().add(textPane);
 		
 		JButton btnConsultar = new JButton("Consultar");
-		btnConsultar.setBounds(20, 227, 89, 23);
+		btnConsultar.setBounds(42, 227, 89, 23);
 		frame.getContentPane().add(btnConsultar);
 		
-		JButton btnNewButton = new JButton("Voltar");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btnNewButton.setBounds(323, 227, 89, 23);
-		frame.getContentPane().add(btnNewButton);
-		
 		JButton btnLimpar = new JButton("Limpar");
-		btnLimpar.setBounds(175, 227, 89, 23);
+		btnLimpar.setBounds(297, 227, 89, 23);
 		frame.getContentPane().add(btnLimpar);
 		
 		JLabel lblConsultaDeCadastro = new JLabel("Consulta de Cadastro");

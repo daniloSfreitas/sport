@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DAO {
-	public Connection getConexao(){
+	public static Connection getConexao(){
 		Connection conexao = null;
 		
 		try {		

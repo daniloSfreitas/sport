@@ -230,7 +230,13 @@ public class Janela extends Cadastro {
 		   {
 		   public void actionPerformed( ActionEvent e )
 		    {
-			  
+			   
+			   
+			   Cadastro cadastro = new Cadastro();
+			   CadastroDaoImpl c = new CadastroDaoImpl();
+			   
+			   cadastro.setNome(textNome.getText());
+			   
 			   	 	System.out.println("------------Cadastro------------");	
 			   	  Nome = textNome.getText();
 			  	  System.out.println("Nome: "+ Nome);
